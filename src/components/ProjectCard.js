@@ -68,7 +68,7 @@ const ProjectCard = ({ project, onProjectClick }) => {
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
-              Ver Demo
+              Ver Web
             </a>
           )}
         </div>

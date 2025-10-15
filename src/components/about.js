@@ -1,7 +1,51 @@
 import React from 'react';
 import { personalInfo } from '../data/projectsData';
+import profilePhoto from '../assets/FotoCurriculum.jpeg';
 
 const About = () => {
+  const handleContactClick = () => {
+    const email = 'medina.juan.carlos.p@gmail.com';
+    const subject = '🤝 Contacto desde tu Portafolio';
+    const body = `Hola Juan Carlos,
+
+Te escribo desde tu portafolio online. Me interesa contactarte porque:
+
+💼 Motivo del contacto:
+[Describir brevemente el interés]
+
+📧 Mi información de contacto:
+• Nombre: 
+• Email: 
+• Teléfono: 
+• LinkedIn: (opcional)
+
+🏢 Sobre mí/mi empresa:
+[Breve descripción]
+
+⌚ Mejor horario para contactar:
+[Indicar preferencia]
+
+¡Quedo atento a tu respuesta!
+
+Saludos cordiales`;
+
+    const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.open(mailtoLink, '_blank');
+  };
+
+  const handleDownloadCV = () => {
+    // Ruta directa al archivo en la carpeta public
+    const cvUrl = '/Curriculum-Juan-Carlos-Pérez-Medina.pdf';
+    
+    // Crear un enlace temporal para descargar
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'CV-Juan-Carlos-Pérez-Medina.pdf'; // Nombre del archivo al descargar
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="about" className="section">
       <div className="container">
@@ -13,19 +57,21 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Soy un <strong>Desarrollador Full Stack</strong> apasionado por crear 
-              soluciones digitales innovadoras y eficientes. Me encanta transformar 
-              ideas en realidad a través del código limpio y las mejores prácticas 
-              de desarrollo.
-            </p>
-            
-            <p>
-              Mi experiencia abarca desde el <strong>desarrollo frontend</strong> con 
-              React y Angular hasta el <strong>backend</strong> con Spring Boot y Node.js, 
-              siempre buscando crear experiencias de usuario excepcionales y 
-              arquitecturas escalables.
+              Soy un <strong>Desarrollador Full Stack</strong> con experiencia en el desarrollo 
+              de aplicaciones web completas. Mi portafolio demuestra habilidades en 
+              <strong> React, diseño responsive</strong> y <strong>optimización de performance</strong>, 
+              mientras que mi aplicación de Gestión de Tareas muestra competencia en 
+              <strong> desarrollo de funcionalidades CRUD</strong>, <strong>gestión de estado </strong> 
+              y <strong>persistencia de datos</strong>.
             </p>
 
+            <p>
+              Me especializo en crear soluciones que combinan <strong>interfaces modernas</strong> 
+              con <strong>arquitecturas backend robustas</strong> usando Spring Boot y Node.js. 
+              Cada proyecto refleja mi compromiso con el <strong>código limpio</strong>, 
+              <strong> mejores prácticas</strong> y <strong>experiencias de usuario intuitivas</strong>.
+            </p>
+            
             <div className="about-details">
               <div className="detail-item">
                 <strong>Nombre:</strong> {personalInfo.name}
@@ -42,21 +88,29 @@ const About = () => {
             </div>
 
             <div className="about-buttons">
-              <a href="#contact" className="btn btn-primary">Contáctame</a>
-              <a 
-                href="/cv-juan-carlos.pdf" 
-                className="btn btn-secondary"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                onClick={handleContactClick}
+                className="btn btn-primary"
               >
-                Descargar CV
-              </a>
+                Contáctame
+              </button>
+              <button 
+                onClick={handleDownloadCV}
+                className="btn btn-secondary download-cv-btn"
+              >
+                📄 Descargar CV
+              </button>
             </div>
           </div>
           
           <div className="about-image">
-            <div className="image-placeholder-about">
-              <span>🚀</span>
+            <div className="profile-photo-container">
+              <img 
+                src={profilePhoto} 
+                alt="Juan Carlos - Desarrollador Full Stack"
+                className="profile-photo"
+              />
+              <div className="photo-frame"></div>
             </div>
           </div>
         </div>

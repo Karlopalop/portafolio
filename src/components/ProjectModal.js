@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import '../styles/ProyectModal.css';
 
 const ProjectModal = ({ project, isOpen, onClose }) => {
   useEffect(() => {
@@ -10,12 +11,11 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      // NO desactivamos el scroll del body - permite scroll fuera
     }
 
     return () => {
       document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
     };
   }, [isOpen, onClose]);
 
@@ -23,8 +23,15 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose}>
+      <div 
+        className="modal-content" 
+        onClick={(e) => e.stopPropagation()}
+      >
+        <button 
+          className="modal-close" 
+          onClick={onClose}
+          aria-label="Cerrar modal"
+        >
           ×
         </button>
         
@@ -93,7 +100,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  🌐 Ver Demo
+                  🌐 Ver Web
                 </a>
               )}
             </div>

@@ -17,7 +17,6 @@ const Footer = () => {
             <a href="#home">Inicio</a>
             <a href="#projects">Proyectos</a>
             <a href="#about">Sobre Mí</a>
-            <a href="#contact">Contacto</a>
           </div>
           
           <div className="footer-social">

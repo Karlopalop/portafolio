@@ -54,11 +54,7 @@ const Header = ({ darkMode, toggleDarkMode }) => {
                 Sobre Mí
               </a>
             </li>
-            <li>
-              <a href="#contact" onClick={(e) => { e.preventDefault(); scrollToSection('contact'); }}>
-                Contacto
-              </a>
-            </li>
+          
             <li>
               <button 
                 className="theme-toggle-simple"

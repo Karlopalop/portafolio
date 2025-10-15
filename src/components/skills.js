@@ -3,28 +3,29 @@ import React from 'react';
 const Skills = () => {
   const skills = {
     "Frontend": [
-      { name: "React", level: 90 },
+      { name: "React", level: 70 },
       { name: "JavaScript", level: 85 },
       { name: "HTML5", level: 95 },
       { name: "CSS3", level: 90 },
-      { name: "Angular", level: 75 }
+      { name: "Angular", level: 80 }
     ],
     "Backend": [
-      { name: "Node.js", level: 80 },
+      { name: "Node.js", level: 75 },
       { name: "Spring Boot", level: 85 },
-      { name: "Java", level: 80 },
-      { name: "Express", level: 75 },
+      { name: "Java", level: 85 },
       { name: "REST APIs", level: 85 }
     ],
     "Base de Datos": [
-      { name: "MySQL", level: 80 },
-      { name: "MongoDB", level: 70 },
-      { name: "PostgreSQL", level: 65 }
+      { name: "MySQL", level: 75 },
+      { name: "MongoDB", level: 80 },
+      { name: "PostgreSQL", level: 70 },
+       { name: "Oracle", level: 65 }
     ],
     "Herramientas": [
       { name: "Git", level: 85 },
       { name: "Docker", level: 60 },
-      { name: "Figma", level: 70 },
+      { name: "IntelliJ IDEA", level: 80 },
+      { name: "Eclipse IDE", level: 70 },
       { name: "VS Code", level: 95 }
     ]
   };

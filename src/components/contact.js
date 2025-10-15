@@ -25,10 +25,10 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // Configura tus credenciales de EmailJS
+  
       const result = await emailjs.send(
-        'service_ynbc75j', // Reemplaza con tu Service ID
-        'template_viabzkq', // Reemplaza con tu Template ID
+        'service_ynbc75j', 
+        'template_viabzkq', 
         {
           from_name: formData.name,
           from_email: formData.email,
@@ -37,7 +37,7 @@ const Contact = () => {
           to_name: personalInfo.name,
           reply_to: formData.email,
         },
-        'MiqfS_555r2i-3k8a' // Reemplaza con tu Public Key
+        'MiqfS_555r2i-3k8a' 
       );
 
       if (result.status === 200) {

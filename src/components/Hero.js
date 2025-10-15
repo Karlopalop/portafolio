@@ -28,7 +28,7 @@ const Hero = () => {
             <ScrollAnimation animation="fade-in" delay={600}>
               <p className="hero-description">
                 Desarrollador Full Stack apasionado por crear soluciones digitales innovadoras. 
-                Especializado en React, Node.js y Spring Boot.
+                Especializado en Spring Boot, React y desarrollo de aplicaciones web modernas.
               </p>
             </ScrollAnimation>
 
@@ -40,20 +40,30 @@ const Hero = () => {
                 >
                   Ver Proyectos
                 </button>
-                <button 
-                  className="btn btn-secondary"
-                  onClick={() => scrollToSection('contact')}
-                >
-                  Contáctame
-                </button>
+               
               </div>
             </ScrollAnimation>
           </div>
           
           <ScrollAnimation animation="slide-right" delay={300}>
             <div className="hero-image">
-              <div className="image-placeholder">
-                <span>💻</span>
+              <div className="image-wrapper">
+                <div className="floating-card">
+                  <div className="tech-stack">
+                    <span className="tech-item">⚛️ React</span>
+                    <span className="tech-item">🔄 Angular</span>
+                    <span className="tech-item">☕ Spring</span>
+                    <span className="tech-item">📦 Node.js</span>
+                    <span className="tech-item">💾 MySQL</span>
+                    <span className="tech-item">🐙 GitHub</span>
+                    <span className="tech-item">⚡ JavaScript</span>
+                    <span className="tech-item">🌐 Full Stack</span>
+                    <span className="tech-item">🔌 API</span>
+                  </div>
+                </div>
+                <div className="main-image">
+                  <span>💻</span>
+                </div>
               </div>
             </div>
           </ScrollAnimation>
@@ -61,7 +71,8 @@ const Hero = () => {
         
         <ScrollAnimation animation="bounce" delay={1000}>
           <div className="scroll-indicator">
-            <span>Scroll ↓</span>
+            <div className="scroll-arrow"></div>
+            <span>Descubre más</span>
           </div>
         </ScrollAnimation>
       </div>
