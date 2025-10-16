@@ -11,7 +11,6 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
 
     if (isOpen) {
       document.addEventListener('keydown', handleEscape);
-      // NO desactivamos el scroll del body - permite scroll fuera
     }
 
     return () => {
@@ -58,18 +57,9 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             <div className="modal-features">
               <h3>Características</h3>
               <ul>
-                {project.features ? (
-                  project.features.map((feature, index) => (
-                    <li key={index}>{feature}</li>
-                  ))
-                ) : (
-                  <>
-                    <li>Interfaz moderna y responsive</li>
-                    <li>Código limpio y mantenible</li>
-                    <li>Optimizado para rendimiento</li>
-                    <li>Buenas prácticas de desarrollo</li>
-                  </>
-                )}
+                {project.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
               </ul>
             </div>
 
@@ -93,6 +83,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               >
                 📁 Ver Código
               </a>
+              {/* Solo mostrar botón Demo si existe liveUrl */}
               {project.liveUrl && (
                 <a 
                   href={project.liveUrl} 
@@ -100,7 +91,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                   target="_blank" 
                   rel="noopener noreferrer"
                 >
-                  🌐 Ver Web
+                  🌐 Ver Página Web
                 </a>
               )}
             </div>

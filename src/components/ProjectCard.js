@@ -60,6 +60,7 @@ const ProjectCard = ({ project, onProjectClick }) => {
           >
             GitHub
           </a>
+          {/* Solo mostrar botón Demo si existe liveUrl */}
           {project.liveUrl && (
             <a 
               href={project.liveUrl} 
@@ -68,7 +69,7 @@ const ProjectCard = ({ project, onProjectClick }) => {
               rel="noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
-              Ver Web
+              Ver Página Web
             </a>
           )}
         </div>

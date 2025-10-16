@@ -14,7 +14,7 @@ export const projectsData = [
     description: "Una aplicación web moderna para gestionar tareas diarias, desarrollada con React y Spring Boot. Permite a los usuarios crear, organizar y realizar seguimiento de sus tareas de manera eficiente con una interfaz intuitiva y características avanzadas como filtrado, búsqueda y estadísticas visuales.",
     technologies: ["Spring Boot", "Angular", "MySQL", "JWT", "REST API", "Bootstrap"],
     githubUrl: "https://github.com/Karlopalop/gestion-tareas-app",
-    liveUrl: "https://gestion-tareas-demo.netlify.app",
+   // liveUrl: "https://gestion-tareas-demo.netlify.app",
     category: "fullstack",
     features: [
        'Crear, editar y eliminar tareas dinámicamente',
