@@ -52,7 +52,7 @@ export const projectsData = [
     description: "Mi portafolio profesional desarrollado con React, featuring un diseño moderno y completamente responsive. Incluye modo claro/oscuro persistente, navegación fluida y está desplegado en Vercel para garantizar máxima velocidad y disponibilidad. Optimizado para SEO y performance.",
     technologies: ["React", "CSS3", "JavaScript", "Netlify"],
     githubUrl: "https://github.com/Karlopalop/portafolio",
-    liveUrl: "https://portafolio-7fkmbsldz-juancas-projects-82ce71d9.vercel.app/",
+    liveUrl: "https://portafolio-m19mhjbqs-juancas-projects-82ce71d9.vercel.app/",
     category: "frontend",
     features: [
      'Diseño responsive y moderno',
